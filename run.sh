@@ -4,8 +4,8 @@
 set -exo pipefail
 
 # Build project
-experimental/gradlew -p experimental assembleDebug
-../android-ndk/android-ndk-r23b/ndk-build NDK_DEBUG=1 1>&2
+#experimental/gradlew -p experimental assembleDebug
+#../android-ndk/android-ndk-r23b/ndk-build NDK_DEBUG=1 1>&2
 
 # Figure out which ABI and SDK the device has
 abi=$(adb shell getprop ro.product.cpu.abi | tr -d '\r')
